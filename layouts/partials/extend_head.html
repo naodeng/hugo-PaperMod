@@ -3,7 +3,7 @@
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 <!-- Umami Web Analytics -->
 {{- if .Site.Params.analytics.umami.enable }}
-<script async defer data-website-id="{{ .Site.Params.analytics.umami.website_id }}" src="{{ .Site.Params.analytics.umami.url }}"></script>
+<script defer data-website-id="{{ .Site.Params.analytics.umami.website_id }}" src="{{ .Site.Params.analytics.umami.url }}"></script>
 {{- end }}
 <!-- Cloudflare Web Analytics -->
 {{- if .Site.Params.analytics.cloudflare.enable }}
