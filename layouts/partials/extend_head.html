@@ -1,4 +1,13 @@
 {{- /* Head custom content area start */ -}}
 {{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
+<!-- Umami Web Analytics -->
+{{- if .Site.Params.analytics.umami.enable }}
+<script async defer data-website-id="{{ .Site.Params.analytics.umami.website_id }}" src="{{ .Site.Params.analytics.umami.url }}"></script>
+{{- end }}
+<!-- Cloudflare Web Analytics -->
+{{- if .Site.Params.analytics.cloudflare.enable }}
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ .Site.Params.analytics.cloudflare.token }}"}'>
+</script>
+{{- end }}
 {{- /* Head custom content area end */ -}}
