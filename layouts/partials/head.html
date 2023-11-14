@@ -35,15 +35,6 @@
 {{- if site.Params.analytics.naver.SiteVerificationTag }}
 <meta name="naver-site-verification" content="{{ site.Params.analytics.naver.SiteVerificationTag }}">
 {{- end }}
-<!-- Umami Web Analytics -->
-{{- if .Site.Params.analytics.umami.enable }}
-<script async defer data-website-id="{{ .Site.Params.analytics.umami.website_id }}" src="{{ .Site.Params.analytics.umami.url }}"></script>
-{{- end }}
-<!-- Cloudflare Web Analytics -->
-{{- if .Site.Params.analytics.cloudflare.enable }}
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ .Site.Params.analytics.cloudflare.token }}"}'>
-</script>
-{{- end }}
 {{- /* Styles */}}
 
 {{- /* includes */}}
