@@ -3,6 +3,15 @@
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- if site.Params.analytics.baidu.SiteVerificationTag }}
 <meta name="baidu-site-verification" content="{{ site.Params.analytics.baidu.SiteVerificationTag }}" />
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cab97265216411ea6a999a5c78811a0c";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 {{- end }}
 <!-- Umami Web Analytics -->
 {{- if .Site.Params.analytics.umami.enable }}
