@@ -9,6 +9,10 @@
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "{{ .Site.Params.analytics.cloudflare.token }}"}'>
 </script>
 {{- end }}
+<!-- Umami Web Analytics -->
+{{- if .Site.Params.analytics.umami.enable }}
+<script defer data-website-id="{{ .Site.Params.analytics.umami.website_id }}" src="{{ .Site.Params.analytics.umami.url }}"></script>
+{{- end }}
 <meta http-equiv="Content-Type" content="text/html;charset=gb2312" />
 <meta name="sogou_site_verification" content="iwkYDJrzfK" />
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7249159446737834"
